@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: x-intelligence-search
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: WALLET_ADDRESS
+        value: 3KwQDrTSUASS6HqDz2RqVDkbKpmDWuSDcGtmAGDn8VZe
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+    buildCommand: bun install --frozen-lockfile --production
+    startCommand: bun run src/index.ts
+    healthCheckPath: /health
