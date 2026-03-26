@@ -94,6 +94,11 @@ app.get('/health', (c) => c.json({
     '/api/airbnb/market-stats',
     '/api/research',
     '/api/trending',
+    '/api/x/search',
+    '/api/x/user/:username',
+    '/api/x/user/:username/tweets',
+    '/api/x/trending',
+    '/api/x/thread/:tweet_id',
   ],
 }));
 
