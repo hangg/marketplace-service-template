@@ -94,6 +94,11 @@ app.get('/health', (c) => c.json({
     '/api/airbnb/market-stats',
     '/api/research',
     '/api/trending',
+    '/api/x/search',
+    '/api/x/user/:username',
+    '/api/x/user/:username/tweets',
+    '/api/x/trending',
+    '/api/x/thread/:tweet_id',
   ],
 }));
 
@@ -137,7 +142,7 @@ app.get('/', (c) => c.json({
       {
         network: 'solana',
         chainId: 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp',
-        recipient: '6eUdVwsPArTxwVqEARYGCh4S2qwW2zCs7jSEDRpxydnv',
+        recipient: '3KwQDrTSUASS6HqDz2RqVDkbKpmDWuSDcGtmAGDn8VZe',
         asset: 'USDC',
         assetAddress: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
         settlementTime: '~400ms',
